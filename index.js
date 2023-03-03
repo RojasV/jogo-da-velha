@@ -12,7 +12,10 @@ function handleClick(e) {
   
   let winner = checkForWinner();
   if (winner) {
-    alert(`O jogador ${winner} venceu!`);
+    alert(`O jogador ${winner.toUpperCase()} venceu!`);
+    cells.forEach(item => {
+      item.textContent = ""
+    })
     return;
   }
   
